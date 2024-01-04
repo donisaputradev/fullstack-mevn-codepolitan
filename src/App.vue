@@ -1,11 +1,17 @@
 <template>
-  <nav>
-    <router-link :to="{ name: 'product' }">Product</router-link> |
-    <router-link :to="{ name: 'product-detail', params: { id: 123 } }">Detail</router-link> |
-    <router-link :to="{ name: 'cart' }">Cart</router-link>
-  </nav>
+  <navbar-component></navbar-component>
   <router-view />
 </template>
+
+<script>
+import NavbarComponent from "./components/NavbarComponent.vue";
+
+export default {
+  components: {
+    NavbarComponent
+  }
+}
+</script>
 
 <style>
 * {
